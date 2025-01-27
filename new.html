@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak & Dimple's Wedding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="bg-gradient-to-br from-pink-200 via-purple-200 to-red-300 min-h-screen flex items-center justify-center">
+  <div class="max-w-5xl mx-auto p-10 bg-white rounded-3xl shadow-2xl relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute w-96 h-96 bg-pink-400 rounded-full opacity-30 blur-3xl -top-40 -left-32 animate-pulse"></div>
+    <div class="absolute w-96 h-96 bg-purple-500 rounded-full opacity-30 blur-3xl -bottom-40 -right-32 animate-pulse"></div>
+
+    <!-- Header Section -->
+    <div class="text-center">
+      <h1 class="text-6xl font-extrabold text-pink-600 flex items-center justify-center gap-3 animate-bounce">
+        Deepak <span class="text-red-500">&#10084;</span> Dimple
+      </h1>
+      <p class="text-lg text-gray-700 mt-4 animate-fade-in">Join us for a celebration of love and commitment!</p>
+    </div>
+
+    <!-- Event Details -->
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-purple-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+        <h2 class="text-2xl font-semibold text-purple-800">Wedding Ceremony</h2>
+        <p class="text-gray-600 mt-2">Date: January 30, 2025</p>
+        <p class="text-gray-600">Time: 10:00 AM</p>
+        <p class="text-gray-600">Venue: The Grand Palace, Jaipur, Rajasthan</p>
+      </div>
+      <div class="bg-red-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105">
+        <h2 class="text-2xl font-semibold text-red-800">Reception</h2>
+        <p class="text-gray-600 mt-2">Date: January 30, 2025</p>
+        <p class="text-gray-600">Time: 6:00 PM</p>
+        <p class="text-gray-600">Venue: Royal Garden, Jaipur, Rajasthan</p>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="mt-16">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Warm Regarding</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+          <!-- <img src="/path/to/team-member1.jpg" alt="Team Member" class="w-20 h-20 mx-auto rounded-full"> -->
+          <h3 class="text-xl font-semibold text-center mt-4">Bhanwarlal Ji Suthar</h3>
+          <p class="text-center text-gray-600">M: <a href="tel:+919928673316">+91 9928673316</a></p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+          <!-- <img src="/path/to/team-member2.jpg" alt="Team Member" class="w-20 h-20 mx-auto rounded-full"> -->
+          <h3 class="text-xl font-semibold text-center mt-4">Satish Kumar Suthar</h3>
+          <p class="text-center text-gray-600">M: <a href="tel:+919983878055">+91 9983878055</a></p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+          <!-- <img src="/path/to/team-member3.jpg" alt="Team Member" class="w-20 h-20 mx-auto rounded-full"> -->
+          <h3 class="text-xl font-semibold text-center mt-4">Adv. Mohit Suthar</h3>
+          <p class="text-center text-gray-600">M: <a href="tel:+919983878055">+91 9694538335</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call-to-Action Buttons -->
+    <div class="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+      <a 
+        href="https://www.google.com/maps?q=The+Grand+Palace,+Jaipur,+Rajasthan" 
+        target="_blank" 
+        class="bg-blue-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-110 text-center">
+        See the location
+      </a>
+      <a 
+        href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Deepak%20%26%20Dimple%20Wedding%0ADESCRIPTION:Join%20us%20for%20our%20wedding%20ceremony%20and%20reception.%0ALOCATION:The%20Grand%20Palace,%20Jaipur,%20Rajasthan%0ADTSTART:20250130T100000Z%0AEND:VEVENT%0AEND:VCALENDAR" 
+        download="wedding.ics" 
+        class="bg-green-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110 text-center">
+        Add to calendar
+      </a>
+      <a 
+        href="/path/to/invitation.pdf" 
+        download 
+        class="bg-purple-500 text-white py-3 px-8 rounded-full shadow-lg hover:bg-purple-600 transition-transform transform hover:scale-110 text-center">
+        Download invitation
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Animations using GSAP
+    gsap.from("h1", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
+    gsap.from("p", { duration: 1, delay: 0.5, opacity: 0 });
+    gsap.from(".grid > div", { duration: 1.5, delay: 0.8, opacity: 0, y: 50, stagger: 0.2, ease: "power3.out" });
+    gsap.from("a", { 
+      duration: 1.2, 
+      delay: 1.5, 
+      opacity: 0, 
+      y: 30, 
+      stagger: 0.3, 
+      ease: "power3.out" 
+    });
+  </script>
+</body>
+</html>
